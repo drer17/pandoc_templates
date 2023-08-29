@@ -2,6 +2,9 @@
 
 Repo for pandoc markdown to pdf template file and useful commands
 
+Useful links: https://github.com/Wandmalfarbe/pandoc-latex-template
+              https://pandoc.org/MANUAL.html#variables-for-latex
+
 ---
 
 ## Meta Data
@@ -33,6 +36,14 @@ pandock example.md -o example.pdf --template custom_basic --listings
 ```
 
 ## Running with docker
+
+1. Install docker
+1. Pull image
+2. run command
+
+```
+docker pull pandoc/extra
+```
 
 ```
 docker run --rm --volume "$(pwd):/data" --user $(id -u):$(id -g) --volume "$(pwd)/custom_basic:/custom_basic" pandoc/extra example.md -o example.pdf --template custom_basic --listings
