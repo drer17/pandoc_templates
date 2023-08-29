@@ -33,7 +33,7 @@ logo-width: 90mm
 ## Running locally
 
 ```
-pandock example.md -o example.pdf --template custom_basic --listings
+pandock <file_name>.md -o <output_name>.pdf --template custom_basic --listings
 ```
 
 ## Running with docker
@@ -47,5 +47,5 @@ docker pull pandoc/extra
 ```
 
 ```
-docker run --rm --volume "$(pwd):/data" --user $(id -u):$(id -g) --volume "$(pwd)/custom_basic:/custom_basic" pandoc/extra example.md -o example.pdf --template custom_basic --listings
+docker run --rm --volume "$(pwd):/data" --user $(id -u):$(id -g) --volume "$(pwd)/custom_basic:/custom_basic" pandoc/extra <file_name>.md -o <output_name>.pdf --template custom_basic --listings
 ```
