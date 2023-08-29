@@ -33,7 +33,7 @@ logo-width: 90mm
 ## Running locally
 
 ```
-pandock <file_name>.md -o <output_name>.pdf --template custom_basic --listings
+pandoc <file_name>.md -o <output_name>.pdf --template custom_basic --listings
 ```
 
 ## Running with docker
