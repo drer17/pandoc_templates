@@ -49,3 +49,14 @@ docker pull pandoc/extra
 ```
 docker run --rm --volume "$(pwd):/data" --user $(id -u):$(id -g) --volume "$(pwd)/custom_basic:/custom_basic" pandoc/extra <file_name>.md -o <output_name>.pdf --template custom_basic --listings
 ```
+
+### Building Container
+
+```
+docker build -t pandoc-custom .
+```
+
+```
+docker run --rm --volume "$(pwd):/data" pandoc-custom input_file.md -o output_file.pdf
+```
+
