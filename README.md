@@ -40,7 +40,7 @@ pandoc <file_name>.md -o <output_name>.pdf --template custom_basic --listings
 
 1. Install docker
 1. Pull image
-2. run command
+2. Run container
 
 ```
 docker pull pandoc/extra
