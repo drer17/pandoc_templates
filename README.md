@@ -2,8 +2,9 @@
 
 Repo for pandoc markdown to pdf template file and useful commands
 
-Useful links: https://github.com/Wandmalfarbe/pandoc-latex-template
-              https://pandoc.org/MANUAL.html#variables-for-latex
+Eisvogel:           https://github.com/Wandmalfarbe/pandoc-latex-template
+
+Pandoc Manual:      https://pandoc.org/MANUAL.html#variables-for-latex
 
 ---
 
