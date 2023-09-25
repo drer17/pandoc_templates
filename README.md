@@ -60,9 +60,26 @@ docker build -t pandoc-custom .
 docker run --rm --volume "$(pwd):/data" pandoc-custom input_file.md -o output_file.pdf
 ```
 
-## Converting Jupyter Notebooks to Markdown
+# Converting Jupyter Notebooks to Markdown
 
 ```
 jupyter nbconvert --to markdown YourNotebook.ipynb
 ```
 
+# Including Equations
+
+Including equations can be achieved with the pandoc-eqnos filter. It is a python package, installed via pip. This has not been tested with the docker process, only running locally.
+
+```
+$$
+math...
+$$ {#eq:<name>}
+```
+
+This equation can then be referenced with `{@eq:<name>}` in text.
+
+To compile with equations...
+
+```
+pandoc <input>.md -o <output>.pdf --template <template_name> --filter pandoc-eqnos --pdf-engine=xelatex --listings
+```
