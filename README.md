@@ -60,3 +60,9 @@ docker build -t pandoc-custom .
 docker run --rm --volume "$(pwd):/data" pandoc-custom input_file.md -o output_file.pdf
 ```
 
+## Converting Jupyter Notebooks to Markdown
+
+```
+jupyter nbconvert --to markdown YourNotebook.ipynb
+```
+
