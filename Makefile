@@ -14,7 +14,7 @@ generate_pdfs: $(patsubst %.md,%.pdf,$(wildcard *.md))
 #FOR WINDOWS
 #docker run --rm -v "$(PWD):/data" -u $(shell id -u):$(shell id -g) -v "$(PWD)/custom_basic:/custom_basic" pandoc/extra $< -o $@ --template $(NAME) --listings
 #LOCALLY
-	pandoc $< -o $@ --template $(NAME) --listings
+	pandoc $< -o $@ --template $(NAME) --filter pandoc-eqnos --pdf-engine=xelatex --listings
 
 
 # Define a Makefile target to remove the template file
