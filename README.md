@@ -28,6 +28,14 @@ logo-width: 90mm
 ---
 ```
 
+### Reference metadata from external file
+
+```
+---
+include-metadata-from: eisvogel-project1.yaml
+---
+```
+
 ---
 
 ## Running locally
