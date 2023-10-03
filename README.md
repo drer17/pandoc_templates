@@ -6,6 +6,8 @@ Eisvogel:           https://github.com/Wandmalfarbe/pandoc-latex-template
 
 Pandoc Manual:      https://pandoc.org/MANUAL.html#variables-for-latex
 
+Download Page:      https://github.com/jgm/pandoc/releases/tag/3.1.8
+
 ---
 
 ## Meta Data
