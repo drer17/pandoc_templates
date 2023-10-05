@@ -80,7 +80,9 @@ jupyter nbconvert --to markdown YourNotebook.ipynb
 
 Including equations can be achieved with the pandoc-eqnos filter. It is a python package, installed via pip. This has not been tested with the docker process, only running locally. 
 
+:::info
 ⚠️ pandoc-eqnos compatible with pandoc version 2.11
+:::
 
 ```
 $$
