@@ -25,7 +25,7 @@ date: \today
 lof: true
 toc: true
 titlepage: true
-titlepage-logo: Figures/UoA.png
+titlepage-logo: figures/UoA.png
 logo-width: 90mm
 ---
 ```
