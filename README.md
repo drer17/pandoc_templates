@@ -46,6 +46,34 @@ include-metadata-from: eisvogel-project1.yaml
 pandoc <file_name>.md -o <output_name>.pdf --template custom_basic --listings
 ```
 
+## Bash function
+
+```bash
+generate_pdfs() {
+  TEMPLATE_FILE="custom_basic.latex"
+  NAME="custom_basic"
+
+  download_template() {
+    curl -o "$TEMPLATE_FILE" https://raw.githubusercontent.com/drer17/pandoc_templates/main/custom_basic.latex
+  }
+
+  clean_template() {
+    rm -f "$TEMPLATE_FILE"
+  }
+
+  convert_to_pdf() {
+    for md_file in *.md; do
+      pdf_file="${md_file%.md}.pdf"
+      pandoc "$md_file" -o "$pdf_file" --template "$NAME" --filter pandoc-eqnos --pdf-engine=xelatex --listings
+    done
+  }
+
+  download_template
+  convert_to_pdf
+  clean_template
+}
+```
+
 ## Running with docker
 
 1. Install docker
